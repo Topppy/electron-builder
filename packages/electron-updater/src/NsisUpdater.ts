@@ -131,6 +131,8 @@ export class NsisUpdater extends BaseUpdater {
   }
 
   private async differentialDownloadInstaller(fileInfo: ResolvedUpdateFileInfo, downloadUpdateOptions: DownloadUpdateOptions, installerPath: string, provider: Provider<any>) {
+    // disable differentialDownloadInstaller
+    return true
     try {
       if (this._testOnlyOptions != null && !this._testOnlyOptions.isUseDifferentialDownload) {
         return true
